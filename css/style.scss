@@ -1204,10 +1204,6 @@ form{
               width: 45%;  
             }
             .buttons{
-                
-                div{
-                    
-                }
                 .button3{
                     padding: 15px;
                     width: 200px;
@@ -1243,20 +1239,20 @@ form{
         display: grid;
            grid-template: 33.34% 33.33% 33.33%;
         
-                .list1,{
+                .list1{
                     grid-column-start: 1;
                     grid-column-end: 2;
-                    grod-row: 1;
+                    grid-row: 1;
                 }
                 .list2{
                     grid-column-start: 3;
                     grid-column-end: 4;
-                    grod-row: 1;
+                    grid-row: 1;
                 }
                 .list3{
                     grid-column-start: 5;
                     grid-column-end: 6;
-                    grod-row: 1;
+                    grid-row: 1;
                 }
             .gridder-show{
                 grid-row: 2;
@@ -1413,20 +1409,20 @@ form{
         display: grid;
            grid-template: 33.34% 33.33% 33.33%;
         
-                .list1,{
+                .list1{
                     grid-column-start: 1;
                     grid-column-end: 2;
-                    grod-row: 1;
+                    grid-row: 1;
                 }
                 .list2{
                     grid-column-start: 3;
                     grid-column-end: 4;
-                    grod-row: 1;
+                    grid-row: 1;
                 }
                 .list3{
                     grid-column-start: 5;
                     grid-column-end: 6;
-                    grod-row: 1;
+                    grid-row: 1;
                 }
             .gridder-show{
                 grid-row: 2;
