@@ -13,9 +13,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "jquery": "^3.5.1",
+    "jsdom": "^16.2.2",
     "next": "^9.4.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "sass": "^1.26.7"
+    "react-masonry-css": "^1.0.14",
+    "sass": "^1.26.7",
+    "user-instagram": "^2.0.8"
+  },
+  "browser": {
+    "child_process": false
   }
 }

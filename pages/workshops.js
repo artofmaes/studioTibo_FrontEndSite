@@ -1,14 +1,8 @@
-import Link from 'next/link';
+import Layout from '../components/Layout';
 export default ()=>{
     return(
         <>
-        <h1>Workshops</h1>
-        <Link href="/contact"><a>Contact</a></Link>
-        <Link href="/about"><a>About</a></Link>
-        <Link href="/portfolio"><a>Portfolio</a></Link>
-        <Link href="/workshops"><a>Workshops</a></Link>
-        <Link href="/"><a>Home</a></Link>
-        <p>Banaan</p>
+        <Layout Title="Workshops" Descr="Alle informatie aangaande workshops vind je hier!"/>
         </>
     )
 }

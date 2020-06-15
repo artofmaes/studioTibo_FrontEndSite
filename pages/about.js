@@ -1,49 +1,9 @@
-import Link from 'next/link';
+import Layout from '../components/Layout';
 export default ()=>{
     return(
         <>
-        <h1>About</h1>
-        <Link href="/contact"><a>Contact</a></Link>
-        <Link href="/about"><a>About</a></Link>
-        <Link href="/portfolio"><a>Portfolio</a></Link>
-        <Link href="/workshops"><a>Workshops</a></Link>
-        <Link href="/"><a>Home</a></Link>
-        <section id="section-five">
-            <div className="wow fadeInLeft">
-                
-            </div>
-            <div className="bio wow fadeInLeft" data-wow-delay=".5s">
-                <h2>Tim 'Tibo' Bolssens</h2>
-                <p>Bolssens Tim, ofwel 'Tibo', is al sinds 2003 actief als zelfstandig beeldend kunstenaar.
-                <br/><br/>
-                Studeerde Vrije Beeldende Kunsten aan de Stedelijke Academie voor Schone Kunsten te Aalst, Grafische &amp; Reclame Vormgeving aan St. Lukas Brussel en Regentaat Plastische opvoeding &amp; Geschiedenis aan de EHSAL te Brussel. Doch die 2 laatste opleidingen niet afgewerkt werden, nam ik de kans om als zelfstandig kunstenaar te starten en freelance te werken voor diverse opdrachten en firma's.
-                <br/><br/>
-                Getrouwd en fulltime papa van 2 dochters. Parttime zelf nog een klein kind.
-                Met andere woorden: ik neem mezelf niet al te serieus en geniet/relativeer zoveel mogelijk. <br/><br/>
-                Liefhebber van films, animatiereeksen en kunst in het algemeen. En kan genieten van een goed cafébezoek,
-                een avondje bordspelen of 'good ol' D&amp;D' rolspelen, met al dan niet een glaasje wijn erbij.</p>
-            </div>
-        </section>
-        <section id="section-seven">
-            <div className="logootje wow fadeInRight">
-            </div>
-            <div className="bio wow fadeInRight" data-wow-delay=".5s">
-                <h2>Studio Tibo</h2>
-                <p>Opgericht eind 2003, ten behoeve van de zelfstandige activiteiten van 'Tibo' in het wereldje van de 9de kunst en daarbuiten.
-                <br/><br/>
-                Sinds de start van Studio Tibo heeft de tijd niet stil gestaan en is er onmiddellijk mee geëvolueerd
-                door de studio om de grote stappen van de striptekenkunst in de digitale wereld te volgen.
-                Meer en meer worden alle fases van ontwerp tot realisatie digitaal gerealiseerd en de studio volgde de trends mee waarbij de oude stijl van werken niet vergeten werd. De digitale revoluties zullen nooit de kracht en finesse van het papier en potlood kunnen vervangen, maar ze benaderen het goed!
-                <br/><br/>
-                Van A tot Z (ontwerp tot drukker) worden projecten omgezet in tastbare, creatieve realisaties voor alle toepassingen van de klanten. Illustraties, huisstijlen, logo's, advies,... het wordt u allemaal aangeboden.
-                <br/><br/>
-                Studio Tibo is vooral actief in de stripverhalenwereld en hielp al mee aan de realisatie van meer dan 40 albums. Sommige bestempelen het ook als
-                een 'strip-productiehuis' naast de andere taken die we tot ons nemen zoals: ontwerpen van flyers, posters, vormgeving van boeken, kaartjes voor
-                huwelijken of geboortes en andere diverse illustratieve opdrachten. 
-                <br/><br/>
-                Ook socio-cultureel en educatief proberen we een steentje bij te dragen door het geven van workshops en tekenateliers aan jongeren vanaf 6 tot 106 jaar, verspreid over Vlaanderen en daarbuiten.</p>
-            </div>
-        </section>
+        <Layout Title="Over Tibo" Descr="En zijn avonturen!"/>
+      
         
         <section id="section-six">
            <h2 className="wow fadeInUp">Mijn Tijdlijn</h2>

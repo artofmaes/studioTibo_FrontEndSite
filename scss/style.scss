@@ -281,65 +281,22 @@ a.pijl:hover {
 #section-one{
     padding: 20px;
     background: $accentkleur;
-    .images{
+    .my-masonry-grid {
         display: flex;
         
-        .row{
-            width: 90%;
-            padding: 10px;
-            div{
-                
-                margin: 20px 0;
-                figure{
-                    width: 100%;
-                    height: 95%;
-                    position: relative;
-                    overflow-y: hidden;
-                    border-radius: 10px;
-                    img{width: 100%;}
-                    figcaption{
-                        position: absolute;
-                        bottom: 0;
-                        background: rgba(0,0,0,.5);
-                        color: white;
-                        width: 100%;
-                        height: 100%;
-                        padding: 1em;
-                       
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-
-                        opacity: 0;
-                        bottom: -100%;
-                        a{
-                            text-decoration: none;
-                            color: $paginakleur;
-                            text-align: center;
-                            font-weight: 600;
-                            @include animatie;
-                            &:hover{
-                                color: $rodekleur;
-                            }
-                        }
-                    }
-                }
-                figure:hover figcaption{
-                    opacity: 1;
-                    bottom: 0;
-
-                }
-
-                /*Animaties*/
-
-                figcaption{
-                    transition: opacity 1s ease, bottom 1s ease ;
-                }
-        
+        width: 100%;
+        }
+    .my-masonry-grid_column {
+        background-clip: padding-box;
+        div img{
+            max-width:100%;
+            filter: grayscale(50%);
+            transition: all ease .25s;
+            &:hover{
+                filter:grayscale(0%);
             }
         }
     }
-    
     
 }
 
@@ -585,6 +542,9 @@ form{
         background: $accentkleur;
         color: $tekstkleur;
         cursor: pointer;
+    }
+    input:focus, textarea:focus{
+        outline-width:0;
     }
     
     h2{
@@ -1069,15 +1029,21 @@ form{
     }
     
     #section-one{
-        
-        .images{
-            width: 80%;
-            margin: 0 auto;
-            .row{
-                width: 100%;
-                padding: 10px 0;
+        .my-masonry-grid {
+            display: flex;
+            margin-left: -15px; /* gutter size offset */
+            width: 100%;
+            }
+        .my-masonry-grid_column {
+            padding-left: 15px; /* gutter size */
+            background-clip: padding-box;
+            div img{
+                max-width:100%;
             }
         }
+        
+    }
+        
         
     }
     
@@ -1274,7 +1240,7 @@ form{
             }
         }
     }
-}
+
 
 /*DESKTOP*/
 
@@ -1299,18 +1265,7 @@ form{
     
     #section-one{
         padding: 30px;
-        .images{
-            flex-direction: column;
-            margin: 0;
-            width: 100%;
-            .row{
-                display: flex;
-                div{
-                    width: 20%;
-                    padding: 5px;
-                }
-            }
-        }
+     
     }
     #section-two{
         padding: 30px 150px;
