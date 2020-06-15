@@ -1,4 +1,5 @@
 import Layout from '../components/Layout';
+import Footer from '../components/Footer';
 export default ()=>{
     return(
         <>
@@ -6,10 +7,10 @@ export default ()=>{
       
         
         <section id="section-six">
-           <h2 className="wow fadeInUp">Mijn Tijdlijn</h2>
+           <h2>Mijn Tijdlijn</h2>
             <section id="timeline">
   
-            <div className="tl-item wow fadeIn" data-wow-delay="1s">
+            <div className="tl-item" >
 
                 <div className="tl-bg" ></div>
 
@@ -23,7 +24,7 @@ export default ()=>{
                 </div>
 
               </div>
-            <div className="tl-item wow fadeIn" data-wow-delay="1.1s">
+            <div className="tl-item" >
 
                 <div className="tl-bg" ></div>
 
@@ -37,7 +38,7 @@ export default ()=>{
                 </div>
 
               </div>
-            <div className="tl-item wow fadeIn" data-wow-delay="1.2s">
+            <div className="tl-item" >
 
                 <div className="tl-bg"></div>
 
@@ -51,7 +52,7 @@ export default ()=>{
                 </div>
 
               </div>
-            <div className="tl-item wow fadeIn" data-wow-delay="1.3s">
+            <div className="tl-item">
 
                 <div className="tl-bg" ></div>
 
@@ -65,7 +66,7 @@ export default ()=>{
                 </div>
 
               </div>
-            <div className="tl-item wow fadeIn" data-wow-delay="1.4s">
+            <div className="tl-item">
 
                 <div className="tl-bg" ></div>
 
@@ -79,7 +80,7 @@ export default ()=>{
                 </div>
 
               </div>
-            <div className="tl-item wow fadeIn" data-wow-delay="1.5s">
+            <div className="tl-item">
 
                 <div className="tl-bg" ></div>
 
@@ -93,7 +94,7 @@ export default ()=>{
                 </div>
 
               </div>
-            <div className="tl-item wow fadeIn" data-wow-delay="1.6s">
+            <div className="tl-item">
 
                 <div className="tl-bg" ></div>
 
@@ -107,7 +108,7 @@ export default ()=>{
                 </div>
 
               </div>
-            <div className="tl-item wow fadeIn" data-wow-delay="1.7s">
+            <div className="tl-item">
 
                 <div className="tl-bg" ></div>
 
@@ -120,7 +121,7 @@ export default ()=>{
                   <p>Sinds het einde van Studio MAX! ben ik zelf nieuwe oorden gaan opzoeken, en heb ik enkele fantastische illustraties mogen maken voor het magazine Menzo en mocht ik zelf een mascotte ontwerpen voor Sporta's nieuwe zomerbrochure van dat jaar.</p>
                 </div>  
               </div>
-            <div className="tl-item wow fadeIn" data-wow-delay="1.8s">
+            <div className="tl-item">
 
                 <div className="tl-bg" ></div>
 
@@ -136,6 +137,7 @@ export default ()=>{
               </div>
             </section>
         </section>
+        <Footer/>
         </>
     )
 }

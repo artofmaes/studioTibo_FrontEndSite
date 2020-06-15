@@ -281,6 +281,13 @@ a.pijl:hover {
 #section-one{
     padding: 20px;
     background: $accentkleur;
+    h2{
+        font-size: 2rem;
+        text-align: center;
+        font-weight: 600;
+        color: $paginakleur;
+        margin-bottom: 10px;
+    }
     .my-masonry-grid {
         display: flex;
         

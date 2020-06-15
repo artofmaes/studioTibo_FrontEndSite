@@ -1,4 +1,5 @@
 import Layout from '../components/Layout';
+import Footer from '../components/Footer';
 import axios from 'axios';
 import {useState} from 'react';
 import Masonry from 'react-masonry-css';
@@ -11,13 +12,12 @@ const breakpointColumnsObj = {
 
 
 export default ({postData})=>{
-    
-    console.log(postData.posts)
     return(
         <>
         <Layout Title="Studio Tibo" Descr="Jouw polyvalente tekenaar!"/>
         
         <section id="section-one">
+        <h2>Mijn recente Instagramposts</h2>
             <Masonry breakpointCols={breakpointColumnsObj} className="my-masonry-grid" columnClassName="my-masonry-grid_column">
                 {postData.posts.map(post =>{
                     return(
@@ -28,12 +28,12 @@ export default ({postData})=>{
         </section>
        
         <section id="section-three">
-            <h2 className="wow fadeInUp">Opkomende Evenementen</h2>
+            <h2>Opkomende Evenementen</h2>
             <div className="events">
                        
             </div>
         </section>
-
+        <Footer />
 
         </>
     )
