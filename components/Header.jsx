@@ -3,7 +3,7 @@ export default ({Title, Descr})=>{
     return(
         <header className="header1">
             <div className="transparant">
-                    <a href="./" title="Ga naar de startpagina" className="logo"><img src={"../images/studiotibo-logo-wit.png"} alt="Studio Tibo Logo"/></a>
+                    <a href="./" title="Ga naar de startpagina" className="logo"><img src="../images/studiotibo-logo-wit.png" alt="Studio Tibo Logo"/></a>
                     <h1 >{Title}</h1>
                     <p className="introtext">{Descr}</p>
                     <ul className="social">

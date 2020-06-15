@@ -12,7 +12,7 @@ export default ()=>{
   
             <div className="tl-item" >
 
-                <div className="tl-bg" ></div>
+                <div className="tl-bg" style={{backgroundImage:'url(../images/gag1.jpg)'}}></div>
 
                 <div className="tl-year">
                   <p className="f2 heading--sanSerif">2000</p>
@@ -26,7 +26,7 @@ export default ()=>{
               </div>
             <div className="tl-item" >
 
-                <div className="tl-bg" ></div>
+                <div className="tl-bg" style={{backgroundImage:'url(../images/2.jpg)'}}></div>
 
                 <div className="tl-year">
                   <p className="f2 heading--sanSerif">2002</p>
@@ -40,7 +40,7 @@ export default ()=>{
               </div>
             <div className="tl-item" >
 
-                <div className="tl-bg"></div>
+                <div className="tl-bg" style={{backgroundImage:'url(../images/logokleur.jpg)'}}></div>
 
                 <div className="tl-year">
                   <p className="f2 heading--sanSerif">2003</p>
@@ -54,7 +54,7 @@ export default ()=>{
               </div>
             <div className="tl-item">
 
-                <div className="tl-bg" ></div>
+                <div className="tl-bg" style={{backgroundImage:'url(../images/max.jpg)'}}></div>
 
                 <div className="tl-year">
                   <p className="f2 heading--sanSerif">2004</p>
@@ -68,7 +68,7 @@ export default ()=>{
               </div>
             <div className="tl-item">
 
-                <div className="tl-bg" ></div>
+                <div className="tl-bg" style={{backgroundImage:'url(../images/kamp.jpg)'}}></div>
 
                 <div className="tl-year">
                   <p className="f2 heading--sanSerif">2005</p>
@@ -82,7 +82,7 @@ export default ()=>{
               </div>
             <div className="tl-item">
 
-                <div className="tl-bg" ></div>
+                <div className="tl-bg" style={{backgroundImage:'url(../images/syntra.jpg)'}}></div>
 
                 <div className="tl-year">
                   <p className="f2">2008</p>
@@ -96,7 +96,7 @@ export default ()=>{
               </div>
             <div className="tl-item">
 
-                <div className="tl-bg" ></div>
+                <div className="tl-bg"  style={{backgroundImage:'url(../images/strip31.jpg)'}}></div>
 
                 <div className="tl-year">
                   <p className="f2 heading--sanSerif">2009</p>
@@ -110,7 +110,7 @@ export default ()=>{
               </div>
             <div className="tl-item">
 
-                <div className="tl-bg" ></div>
+                <div className="tl-bg" style={{backgroundImage:'url(../images/lien.jpg)'}}></div>
 
                 <div className="tl-year">
                   <p className="f2 heading--sanSerif">2013</p>
@@ -123,7 +123,7 @@ export default ()=>{
               </div>
             <div className="tl-item">
 
-                <div className="tl-bg" ></div>
+                <div className="tl-bg" style={{backgroundImage:'url(../images/3.jpg)'}} ></div>
 
                 <div className="tl-year">
                   <p className="f2">HEDEN</p>
