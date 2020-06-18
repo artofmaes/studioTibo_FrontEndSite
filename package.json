@@ -21,8 +21,5 @@
     "react-masonry-css": "^1.0.14",
     "sass": "^1.26.7",
     "user-instagram": "^2.0.8"
-  },
-  "browser": {
-    "child_process": false
   }
 }

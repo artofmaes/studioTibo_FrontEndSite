@@ -1,9 +1,27 @@
 import Contact2 from './Contact2'
-
+import {useRef, useEffect} from 'react';
 
 
 export default () =>{
-
+    const footEl = useRef();
+    useEffect(() => {
+        $(window).scroll(function(){
+            if ($(this).scrollTop() > 50) {
+                $(footEl.current).fadeIn();
+            } else {
+                $(footEl.current).fadeOut();
+            }
+        });
+        
+        //Click event to scroll to top
+        $(footEl.current).click(function(){
+            $('html, body').animate({scrollTop : 0},1000);
+            return false;
+        });
+        return () => {
+            
+        }
+    }, [])
    
     return(
         <>
@@ -16,9 +34,10 @@ export default () =>{
             
             <p>&copy; 2019 Studio Tibo. Ontwerp door <a href="https://www.artofmaes.be" target="_blank" title="Bekijk hier de ontwerper zijn webpagina!">Art Of Maes</a>. <a href="../disclaimer/disclaimer.html" title="Bekijk hier de disclaimer">DISCLAIMER</a></p>
         </footer>
-        <a href="#" className="scrollToTop">
+        <a href="#" className="scrollToTop" ref={footEl}>
             <span className="fa fa-arrow-up"></span>
         </a>
         </>
     )
 }
+
