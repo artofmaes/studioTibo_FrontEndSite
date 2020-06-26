@@ -737,6 +737,7 @@ form{
 #section-eight{
     background: url(../public/images/kamp.jpg) center/cover fixed;
     color: $paginakleur;
+    text-align: center;
     
     .transparant2{
         background: $donkertransparant;
@@ -752,56 +753,39 @@ form{
         margin-top: 10px;
         margin-bottom: 30px;
     }
-    .table{
-        overflow-x: auto;
-        .streep{
-            height: 1px;
-            background: #CCC;
-            margin-top: 10px;
-        }
-        table {
-              border-collapse: collapse;
-              border-spacing: 0;
-              width: 80%;
-              margin: 0 auto;
-            }
-
-            th, td {
-              text-align: left;
-              padding: 8px;
-        }
-        th{
-            background: $donkeraccent;
+    
+    table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100% !important;
+            margin: 0 auto;
+            th{
+            background: $donkeraccent !important;
             font-weight: 600;
             font-size: .8em;
             
             
+            }
+            td{
+                background: $paginakleur;
+                color: $tekstkleur;
+                font-size: 1em;
+                border: 1px solid #CCC;
+            }
+            th, td {
+                text-align: left;
+                padding: 8px;
         }
-        .eerste{border-top-left-radius: 20px;}
-        .laatste{border-bottom-right-radius: 20px;}
-        td{
-            background: $paginakleur;
-            color: $tekstkleur;
-            font-size: .6em;
-            border: 1px solid #CCC;
-        }
-        .date{
-            background: $accentkleur;
-            font-weight:600;
-        }  
-        .uur{
-            font-size: .5em;
-            
-        }
-        
     }
+        
+    
 }
 
 #section-nine{
     background: $paginakleur;
     padding: 20px;
-    .info{
-        .logo{
+    .info2{
+        .fotos{
             margin-top: 20px;
             width: 70%;
             margin: 0 auto;
@@ -1154,6 +1138,9 @@ form{
         }
         div{
             width: 45%;
+            div{
+                width: 100%;
+            }
         }
     }
     
@@ -1169,7 +1156,12 @@ form{
             text-align: left;
         }
         
-        div{width:65%;}
+        div{
+            width:65%;
+            div{
+                width: 100%;
+            }
+        }
     }
     
     #section-eight{
@@ -1180,20 +1172,24 @@ form{
     }
     
     #section-nine{
-        .info{
+        .info2{
             display: flex;
             flex-direction: row-reverse;
             justify-content: space-around;
-            .logo{
-                width: 45%;
+            .fotos{
+                width: 40%;
+                padding: 100px;
             }
-            .info2{
-              width: 45%;  
+            .uitleg{
+              width: 45%;
+              padding: 100px 50px;  
+              font-size: 1.1em;
             }
             .buttons{
                 .button3{
                     padding: 15px;
                     width: 200px;
+                    left: 0;
                 }
             }
         }
@@ -1208,13 +1204,15 @@ form{
                     width: 45%;
                 }
                 .uitleg{
+                    font-size: 1.1em;
+                    padding: 100px 50px;
                     width: 45%;
                 }
                 
                 .button3{
                     padding: 15px;
                     width: 200px;
-                    left: 18%;
+                    left: 0;
                 }
             }
         }

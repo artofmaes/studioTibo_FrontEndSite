@@ -5,7 +5,7 @@ export default ({Title, Descr})=>{
     const el = useRef();
     useEffect(() => {
         $(el.current)
-        console.log($(el.current))
+       
         $(el.current).backgroundCycle({
             imageUrls: [
                 'images/1.jpg',

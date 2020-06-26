@@ -12,7 +12,7 @@ const breakpointColumnsObj = {
 
 
 export default ({postData, sections, events})=>{
-    console.log(events)
+    
     return(
         <>
         <Layout Title="Studio Tibo" Descr="Jouw polyvalente tekenaar!"/>

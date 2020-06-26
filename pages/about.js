@@ -2,7 +2,7 @@ import Layout from '../components/Layout';
 import Footer from '../components/Footer';
 import axios from 'axios'
 export default ({sections})=>{
-  console.log(sections)
+  
     return(
         <>
         <Layout Title="Over Tibo" Descr="En zijn avonturen!"/>
@@ -12,8 +12,8 @@ export default ({sections})=>{
               {section.textfield.map(text=>{
                 return(
                   <>
-                  <div>
-                    <img src={`https://wdev.be/wdev_jordi/eindwerk/image.php?test.jpg&width=250&height=400&image=/wdev_jordi/eindwerk/assets/images/${text.image}`} alt="Tim Bolssens"/>
+                  <div className="logootje">
+                    <img src={`https://wdev.be/wdev_jordi/eindwerk/assets/images/${text.image}`} alt="Tim Bolssens"/>
                   </div>
                   <div>
                     <h2>{text.title}</h2>
