@@ -9,7 +9,7 @@ export default () =>{
 
     const handleSubmit2 = (e) => {
         e.preventDefault();
-        axios.post('https://127.0.0.1:8000/api/contacts', {
+        axios.post('https://wdev.be/wdev_jordi/eindwerk/api/contacts', {
             naam: naam2,
             email: email2,
             vraag: vragen2

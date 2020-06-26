@@ -1,11 +1,30 @@
 import Layout from '../components/Layout';
 import Footer from '../components/Footer';
-export default ()=>{
+import axios from 'axios'
+export default ({sections})=>{
+  console.log(sections)
     return(
         <>
         <Layout Title="Over Tibo" Descr="En zijn avonturen!"/>
-      
-        
+        {sections.map(section =>{
+          return(
+            <section id={section.naam} key={section.naam}>
+              {section.textfield.map(text=>{
+                return(
+                  <>
+                  <div>
+                    <img src={`https://wdev.be/wdev_jordi/eindwerk/image.php?test.jpg&width=250&height=400&image=/wdev_jordi/eindwerk/assets/images/${text.image}`} alt="Tim Bolssens"/>
+                  </div>
+                  <div>
+                    <h2>{text.title}</h2>
+                    <div dangerouslySetInnerHTML={{__html: text.tekst}}/>
+                  </div>
+                  </>
+                )
+              })}
+            </section>
+          )
+        })}        
         <section id="section-six">
            <h2>Mijn Tijdlijn</h2>
             <section id="timeline">
@@ -140,4 +159,18 @@ export default ()=>{
         <Footer/>
         </>
     )
+}
+
+export async function getStaticProps(){
+  const res = await axios.get('https://wdev.be/wdev_jordi/eindwerk/api/sections?pagina=7');
+  const sectionData = res.data['hydra:member']
+ 
+
+  return {
+      props:{
+         
+          sections: sectionData
+          
+      }
+  }
 }

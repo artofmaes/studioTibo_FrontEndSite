@@ -11,7 +11,8 @@ const breakpointColumnsObj = {
 };
 
 
-export default ({postData})=>{
+export default ({postData, sections, events})=>{
+    console.log(events)
     return(
         <>
         <Layout Title="Studio Tibo" Descr="Jouw polyvalente tekenaar!"/>
@@ -26,11 +27,39 @@ export default ({postData})=>{
                 })}
             </Masonry>
         </section>
-       
+       {sections.map(section =>{
+           return(
+            <section id={section.naam} key={section.naam}>
+            <h2>{section.h1Titel}</h2>
+            <div className="items">
+                {section.textfield.map(text =>{
+                    return(
+                        <div className="item" key={text.title}>
+                            <span className="fa fa-pencil"></span>
+                            <h3>{text.title}</h3>
+                            <div className="text" dangerouslySetInnerHTML={{__html: text.tekst}}/>
+                            <a className="button" href={text.link}>Meer info</a>
+                        </div>
+                    )
+                })}
+            </div>
+            </section>
+           )
+       })}
         <section id="section-three">
             <h2>Opkomende Evenementen</h2>
             <div className="events">
-                       
+                {events.map(event =>{
+                    return(
+                        <div className="nice" key={event.naam}>
+                            <h3>{event.naam}</h3>
+                            <p>{event.beschrijving}</p>
+                            <img src={`https://wdev.be/wdev_jordi/eindwerk/image.php?test.jpg&width=250&height=400&image=/wdev_jordi/eindwerk/assets/images/${event.img}`} />
+                            <a href={event.link} target="_blank" title="Ontdek hier meer!" className="button2">Meer info</a>
+
+                        </div>
+                    )
+                })}       
             </div>
         </section>
         <Footer />
@@ -39,14 +68,19 @@ export default ({postData})=>{
     )
 }
 
-export async function getServerSideProps(){
+export async function getStaticProps(){
     const userInstagram = require("user-instagram");
     const postData = await userInstagram("studiotibo");
-    
+    const res = await axios.get('https://wdev.be/wdev_jordi/eindwerk/api/sections?pagina=6');
+    const sectionData = res.data['hydra:member']
+    const res2 = await axios.get('https://wdev.be/wdev_jordi/eindwerk/api/events');
+    const eventData = res2.data['hydra:member'];
 
     return {
         props:{
-            postData
+            postData: postData,
+            sections: sectionData,
+            events: eventData
         }
     }
 }

@@ -19,8 +19,13 @@
     padding: 0;
 }
 
+img{
+    display: block;
+}
+
 body{
     font: 100%/1.6 $hoofdfont;
+
     max-width: 1920px;
     margin: 0 auto;
     background: $achtergrondkleur;
@@ -336,8 +341,10 @@ a.pijl:hover {
         }
         p{
             font-size: .8em;
+            
         }
-        div{
+        .item{
+            
             margin: 30px 0;
             height: 250px;
             position: relative;
@@ -365,6 +372,7 @@ a.button{
         background: $accentkleur;
     }
 /*section-three*/
+
 #section-three{
     width: 100%;
     padding: 30px;
@@ -391,6 +399,9 @@ a.button{
             margin-bottom: 30px;
         }
         div{
+            img{
+                margin: 0 auto;
+            }
             margin: 170px 0;
             height: 85vh;
             &:first-of-type{
@@ -422,8 +433,11 @@ a.button{
 @media screen and (min-width: 600px){
     #section-three{
         .events{
-            iframe{margin-bottom: 20px;}
+            
             div{
+                img{
+                    margin-bottom: 30px;
+                }
                 height: 60vh ;
             }
         }
@@ -1060,7 +1074,7 @@ form{
             display: flex;
             justify-content: space-around;
             
-            div{
+            .item{
                 
                 width: 30%;
             }
