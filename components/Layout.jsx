@@ -5,9 +5,9 @@ export default ({Title, Descr})=>{
     return(
         <>
         <Head>
-            <meta charset="UTF-8" />
+            <meta charSet="UTF-8" />
             <title>{Title}</title>
-            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             <meta name="description" content="Welkom op de site van Studio Tibo, jouw polyvalente tekenaar! Bekijk hier het uitgebreide portfolio van Tibo!" />
             
         </Head>
