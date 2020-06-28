@@ -12,10 +12,10 @@ export default ({sections})=>{
               {section.textfield.map(text=>{
                 return(
                   <>
-                  <div className="logootje blokje" key={text.title}>
+                  <div className="logootje blokje" key={text.id}>
                     <img src={`https://wdev.be/wdev_jordi/eindwerk/assets/images/${text.image}`} alt="Tim Bolssens"/>
                   </div>
-                  <div className="blokje">
+                  <div className="blokje" key={text.id}>
                     <h2>{text.title}</h2>
                     <div dangerouslySetInnerHTML={{__html: text.tekst}}/>
                   </div>

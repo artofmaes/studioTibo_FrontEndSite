@@ -55,7 +55,7 @@ export default ({categories, comics, illustraties, ontwerpen})=>{
              <Masonry breakpointCols={breakpointColumnsObj} className="my-masonry-grid" columnClassName="my-masonry-grid_column">
                 {comics.map(comic =>{
                     return(
-                        <div  key={comic.id}><a data-fancybox="comics" href={`https://wdev.be/wdev_jordi/eindwerk/assets/images/${comic.filename}`}><img src={`https://wdev.be/wdev_jordi/eindwerk/image.php?test.jpg&width=250&height=400&image=/wdev_jordi/eindwerk/assets/images/${comic.filename}`}/></a></div>
+                        <div  key={comic.naam} ><a data-fancybox="comics" href={`https://wdev.be/wdev_jordi/eindwerk/assets/images/${comic.filename}`}><img src={`https://wdev.be/wdev_jordi/eindwerk/image.php?test.jpg&width=250&height=400&image=/wdev_jordi/eindwerk/assets/images/${comic.filename}`}/></a></div>
                     )
                 })}
             </Masonry>
@@ -65,7 +65,7 @@ export default ({categories, comics, illustraties, ontwerpen})=>{
                 <Masonry breakpointCols={breakpointColumnsObj} className="my-masonry-grid" columnClassName="my-masonry-grid_column">
                     {illustraties.map(illustratie =>{
                         return(
-                            <div key={illustratie.id}><a data-fancybox="illustraties" href={`https://wdev.be/wdev_jordi/eindwerk/assets/images/${illustratie.filename}`}><img src={`https://wdev.be/wdev_jordi/eindwerk/image.php?test.jpg&width=250&height=400&image=/wdev_jordi/eindwerk/assets/images/${illustratie.filename}`}/></a></div>
+                            <div key={illustratie.naam}><a data-fancybox="illustraties" href={`https://wdev.be/wdev_jordi/eindwerk/assets/images/${illustratie.filename}`}><img src={`https://wdev.be/wdev_jordi/eindwerk/image.php?test.jpg&width=250&height=400&image=/wdev_jordi/eindwerk/assets/images/${illustratie.filename}`}/></a></div>
                         )
                     })}
                 </Masonry>
@@ -75,7 +75,7 @@ export default ({categories, comics, illustraties, ontwerpen})=>{
                 <Masonry breakpointCols={breakpointColumnsObj} className="my-masonry-grid" columnClassName="my-masonry-grid_column">
                     {ontwerpen.map(ontwerp =>{
                         return(
-                            <div key={ontwerp.id}><a data-fancybox="ontwerpen" href={`https://wdev.be/wdev_jordi/eindwerk/assets/images/${ontwerp.filename}`}><img src={`https://wdev.be/wdev_jordi/eindwerk/image.php?test.jpg&width=250&height=400&image=/wdev_jordi/eindwerk/assets/images/${ontwerp.filename}`}/></a></div>
+                            <div key={ontwerp.naam}><a data-fancybox="ontwerpen" href={`https://wdev.be/wdev_jordi/eindwerk/assets/images/${ontwerp.filename}`}><img src={`https://wdev.be/wdev_jordi/eindwerk/image.php?test.jpg&width=250&height=400&image=/wdev_jordi/eindwerk/assets/images/${ontwerp.filename}`}/></a></div>
                         )
                     })}
                 </Masonry>

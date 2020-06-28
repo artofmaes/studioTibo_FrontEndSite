@@ -345,8 +345,6 @@ a.button{
         }
     }
 
-
-
 a.button2{
     text-decoration: none;    
     background: $rodekleur;
@@ -414,8 +412,6 @@ footer{
     }
 }
 
-
-
 /*CONTACT*/
 
 /*SECTION-FOUR*/
@@ -479,7 +475,6 @@ footer{
         margin-bottom: 30px;
     }
 }
-
 
 /*ABOUT*/
 /*SECTION-SIX*/
@@ -926,7 +921,7 @@ footer{
     }
 
     #section-three{
-        height: 70vh;
+        height: 700px;
         .events{
             display: flex;
             justify-content: space-around;
@@ -1007,448 +1002,137 @@ footer{
         }
     }
     #section-eleven{
-        height: 50vh;
+        
         .container .gridder{
             display: flex;
         }
     }
 }
 
-// @media screen and (max-height: 450px) {
-//   .sidenav {padding-top: 15px;}
-//   .sidenav a {font-size: 18px;}
-// }
+@media screen and (min-width: 1000px){
+    header{
+        a.logo{
+            width: 150px;
+        }
+        h1{
+            font-size: 5rem;
+        }
+        .introtext{
+            font-size: 1.5em;
+        }
+        .social li a{
+            font-size: 3em;
+        }
+    }
 
-// @media screen and (min-width: 370px){
-//     #section-three{
-//         .events{
-//             div{
-//                 margin: 50px 0;
-//             }
-//         }
-//     }
-// }
-// @media screen and (min-width: 450px){
-//     #section-three{
-//         .events{
-//             div{
-//                 height: 70vh;
-//                 margin: 50px 0;
-//             }
-//         }
-//     }
-// }
-// @media screen and (min-width: 600px){
-//     #section-three{
-//         .events{
-            
-//             div{
-//                 img{
-//                     margin-bottom: 30px;
-//                 }
-//                 height: 60vh ;
-//             }
-//         }
-//     }
-// }
-// /*Tablet*/
+    footer{
+        .footer{
+            address{                
+                margin: auto 0;
+            }
+        }
+    }
 
-// @media screen and(min-width: 750px){
-    
-//     .social{
-//         padding: 0 200px;
-//     }
-    
-//     #section-one{
-//         .my-masonry-grid {
-//             display: flex;
-//             margin-left: -15px; /* gutter size offset */
-//             width: 100%;
-//             }
-//         .my-masonry-grid_column {
-//             padding-left: 15px; /* gutter size */
-//             background-clip: padding-box;
-//             div img{
-//                 max-width:100%;
-//             }
-//         }
-        
-//     }
-        
-        
-//     }
-    
-//     #section-two{
-//         height: 50vh;
-//         .items{
-//             display: flex;
-//             justify-content: space-around;
-            
-//             .item{
+    #section-two{
+        padding: 70px;
+        .item{
+            width: 30%;
+            div{
+                font-size: 1.2em;
+            }
+        }
+    }
+
+    #section-three{
+        height: 800px;
+        .events{
+            .nice{
+                width: 30%;
+                font-size: 1.1em;
+
+                img{
+                    max-width: 100%;
+                    margin-bottom: 20px;;
+                }
                 
-//                 width: 30%;
-//             }
-//         }
-//     }
-    
-//     #section-three{
-//         .events{
-//             display: flex;
-//             justify-content: space-between;
-//             div{
-//                 width: 30%;
-//                 &:first-of-type{
-//                     margin-top: 50px;
-//                 }
-//                 iframe{
-//                     width: 100%;
-//                     :first-child{
-//                         margin-top: 25px;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-    
-//     footer{
-//         .footer{
-//             display: flex;
-//             justify-content: space-around;
-//             div{
-//                 width: 30%;
-//                 img{width:80%;}
-//             }
-            
-//             form{
-//                 width: 30%;
-//             }
-//         }
-//     }
-    
-//     #section-four{
-//         padding: 20px 50px;
+            }
+        }
+    }
+    #section-four{
+        padding: 50px 250px;
+    }
+    #section-five{
+        .blokje{
+            width: 30%;
+        }
+    }
+    #section-six{
+        h2{
+            font-size: 2.5em;
+        }
+        #timeline{
+            flex-direction: row;
+            &:hover {
+                .tl-item {
+                  width: 20%;
+                }
+              }
+        }
+    }
+    #section-seven{
+        .blokje{
+            width: 30%;
+        }
+    }
+    #section-eight{
+        .uitleg div{
+            padding: 40px;
+            font-size: 1.2em;
+        }
+        table{
+            width: 80% !important;
+        }
+    }
+    #section-nine{
+        height: 50vh;
+        .info2{
+            padding: 20px;
+            .fotos, .uitleg{
+                width: 30%;
+                margin: auto 0;
+                font-size: 1.2em;
+            }
+            .buttons{
+                margin-left: -85px;
+            }
+        }
+    }
+    #section-ten{
+        height: 60vh;
+        .info2{
+            padding: 20px;
+           
+            .fotos, .uitleg{
+                width: 30%;
+                margin: auto 0;
+                font-size: 1.2em;
+            }
+            .fotos {
+                margin-top: 35px;
+            }
+            .buttons{
+                margin-left: -85px;
+            }
+        }
+    }
+    #section-eleven{
         
-//     }
-    
-//     #section-six{
- 
-//         #timeline {
-//               flex-direction: row;
-              
-
-//               &:hover {
-//                 .tl-item {
-//                   width: 23.333333333%;
-//                 }
-//               }
-//             }
-
-//             .tl-item {
-//               width: 25%;
-              
-//               &:hover {
-//                 width: 200% !important;
-//               }
-//             }  
-//     }
-    
-//     #section-five{
-//         display: flex;
-//         justify-content: space-between;
-//         p{
-//             font-size: .75em;
-//         }
-//         h2{
-//             font-size: 1.5em;
-//             text-align: left;
-//         }
-//         div{
-//             width: 45%;
-//             div{
-//                 width: 100%;
-//             }
-//         }
-//     }
-    
-//     #section-seven{
-//         display: flex;
-//         justify-content: space-between;
-//         flex-direction: row-reverse;
-//         p{
-//             font-size: .75em;
-//         }
-//         h2{
-//             font-size: 1.5em;
-//             text-align: left;
-//         }
-        
-//         div{
-//             width:65%;
-//             div{
-//                 width: 100%;
-//             }
-//         }
-//     }
-    
-//     #section-eight{
-       
-//         td{
-//             font-size: .9em;
-//         }
-//     }
-    
-//     #section-nine{
-//         .info2{
-//             display: flex;
-//             flex-direction: row-reverse;
-//             justify-content: space-around;
-//             .fotos{
-//                 width: 40%;
-//                 padding: 100px;
-//             }
-//             .uitleg{
-//               width: 45%;
-//               padding: 100px 50px;  
-//               font-size: 1.1em;
-//             }
-//             .buttons{
-//                 .button3{
-//                     padding: 15px;
-//                     width: 200px;
-//                     left: 0;
-//                 }
-//             }
-//         }
-//     }
-    
-//     #section-ten{
-//         .transparant2{
-//             .info2{
-//                 display: flex;
-//                 justify-content: space-around;
-//                 .fotos{
-//                     width: 45%;
-//                 }
-//                 .uitleg{
-//                     font-size: 1.1em;
-//                     padding: 100px 50px;
-//                     width: 45%;
-//                 }
-                
-//                 .button3{
-//                     padding: 15px;
-//                     width: 200px;
-//                     left: 0;
-//                 }
-//             }
-//         }
-//     }
-    
-//     #section-eleven{
-        
-//         .gridder{
-//            display: grid;
-//            grid-template: 30% 10px 30% 10px 30%;
-        
-//                 .list1{
-//                     grid-column-start: 1;
-//                     grid-column-end: 2;
-//                     grid-row: 1;
-//                 }
-//                 .list2{
-//                     grid-column-start: 4;
-//                     grid-column-end: 5;
-//                     grid-row: 1;
-//                 }
-//                 .list3{
-//                     grid-column-start: 6;
-//                     grid-column-end: 7;
-//                     grid-row: 1;
-//                 }
-//             .gridder-show{
-//                 grid-row: 2;
-//                 grid-column-start: 1;
-//                 grid-column-end: 6;
-
-//             }
-//         }
-//         .imgrow{
-//             display: flex;
-//             width: 100%;
-//             justify-content: center;
-//             .images{
-//                 display: flex;
-//                 justify-content: space-between;
-//                 width: 100%;
-//             }
-//             img{
-//                 width: 100%;
-//             }
-//         }
-//     }
-
-
-// /*DESKTOP*/
-
-// @media screen and(min-width:1000px){
-//     .header1, .header2{
-//         h1{
-//             font-size: 5rem;
-//         }
-//         p{
-//             font-size: 1.5rem;
-//         }
-//     }
-    
-//     a.logo{
-//         width: 10%;
-//     }
-    
-//     .social{
-//         font-size: 1.5em;
-//         padding: 0 250px;
-//     }
-    
-//     #section-one{
-//         padding: 30px;
-     
-//     }
-//     #section-two{
-//         padding: 30px 150px;
-//         height: 400px;
-//     }
-//     #section-three{
-//         height: 750px;
-//     }
-    
-//     footer{
-//         .footer{
-//             justify-content: space-around;
-//             div{
-//                 width: 30%;
-//                 img{
-//                     width: 30%;
-//                 }
-//             }
-//             address{
-//                 padding-top: 30px;
-//             }
-//             form{
-//                 input[type=text], input[type=email], textarea{
-//                     width: 80%;
-//                     border: 1px solid $accentkleur;
-//                     border-radius: 10px;
-//                     background: $paginakleur;
-//                     padding: .5em;
-//                     font: 80%/1.3 Montserrat, Arial, sans-serif;
-//                     color: #666;
-
-//                 }
-
-//                 textarea{min-height: 75px;}
- 
-//             }
-//         }
-//     }
-    
-//     #section-four{
-//         padding: 50px 250px;
-//     }
-    
-//     #section-six{
-//         padding-bottom: 30px;
-//         h2{
-//             font-size: 3rem;
-//         }
-//     }
-//     #section-five{
-//         justify-content: space-around;
-//         padding: 20px 150px;
-//         div{width: 35%;}
-//     }
-//     #section-seven{
-//         justify-content: space-around;
-//         padding: 30px 150px;
-//         div{
-//             width: 45%;
-            
-//         }
-//         .logootje{width: 25%;}
-//     }
-    
-//     #section-eight{
-//         .transparant2{
-//             padding: 20px 150px;
-//             p{
-//                 margin-top: 30px;
-//             }
-//             .table{
-//                 table{
-//                     width: 99%;
-//                     td{font-size: .7em;}
-//                 }
-//             }
-//         }
-//     }
-//     #section-nine{
-//         .info{
-//             padding: 20px 150px;
-            
-//         }
-
-        
-//     }
-//     #section-ten{
-//         .transparant2{
-//             padding: 20px 150px;
-//         }
-//     }
-    
-//     #section-eleven{
-//         padding: 50px 150px;
-//         .gridder{
-//         display: grid;
-//            grid-template: 33.34% 33.33% 33.33%;
-        
-//                 .list1{
-//                     grid-column-start: 1;
-//                     grid-column-end: 2;
-//                     grid-row: 1;
-//                 }
-//                 .list2{
-//                     grid-column-start: 3;
-//                     grid-column-end: 4;
-//                     grid-row: 1;
-//                 }
-//                 .list3{
-//                     grid-column-start: 5;
-//                     grid-column-end: 6;
-//                     grid-row: 1;
-//                 }
-//             .gridder-show{
-//                 grid-row: 2;
-//                 grid-column-start: 1;
-//                 grid-column-end: 6;
-//             }
-//         }
-//         .imgrow{
-//             display: flex;
-//             width: 100%;
-//             justify-content: center;
-//             .images{
-//                 display: flex;
-//                 justify-content: space-between;
-//                 width: 100%;
-//             }
-//             img{
-//                 width: 100%;
-//             }
-//         }
-//     }
-//     #section-twelve{
-//         padding: 30px 100px;
-//     }
-// }
-    
-
-
+        .container .gridder{
+            justify-content: space-around;
+            padding: 50px 150px;
+            .gridder-list{
+                width: 30%;
+            }
+        }
+    }
+}
