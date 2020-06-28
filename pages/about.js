@@ -12,7 +12,7 @@ export default ({sections})=>{
               {section.textfield.map(text=>{
                 return(
                   <>
-                  <div className="logootje">
+                  <div className="logootje" key={text.title}>
                     <img src={`https://wdev.be/wdev_jordi/eindwerk/assets/images/${text.image}`} alt="Tim Bolssens"/>
                   </div>
                   <div>
@@ -164,13 +164,9 @@ export default ({sections})=>{
 export async function getStaticProps(){
   const res = await axios.get('https://wdev.be/wdev_jordi/eindwerk/api/sections?pagina=7');
   const sectionData = res.data['hydra:member']
- 
-
   return {
       props:{
-         
           sections: sectionData
-          
       }
   }
 }

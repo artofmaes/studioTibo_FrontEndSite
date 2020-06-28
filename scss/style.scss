@@ -161,10 +161,7 @@ body{
     }
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
+
 
 /*HEADER*/
 header{
@@ -411,38 +408,7 @@ a.button{
         }
     }
 
-@media screen and (min-width: 370px){
-    #section-three{
-        .events{
-            div{
-                margin: 50px 0;
-            }
-        }
-    }
-}
-@media screen and (min-width: 450px){
-    #section-three{
-        .events{
-            div{
-                height: 70vh;
-                margin: 50px 0;
-            }
-        }
-    }
-}
-@media screen and (min-width: 600px){
-    #section-three{
-        .events{
-            
-            div{
-                img{
-                    margin-bottom: 30px;
-                }
-                height: 60vh ;
-            }
-        }
-    }
-}
+
 
 a.button2{
     text-decoration: none;    
@@ -913,7 +879,8 @@ form{
 
 .gridder-list {
     width: 100%;
-    display: block;    
+    display: block;
+       
     img{width: 100%;}
     cursor: pointer;
 }
@@ -924,16 +891,26 @@ form{
   position: relative;
   background: #EEE;
     margin-top:-10px;
+    .my-masonry-grid {
+        display: flex;
+        width: 100%;
+        }
+    .my-masonry-grid_column {
+        padding-left: 15px;
+        background-clip: padding-box;
+        
+        div img{
+            max-width:100%;
+            margin-bottom: 15px;
+            filter: grayscale(50%);
+            transition: all ease .25s;
+            &:hover{
+                filter:grayscale(0%);
+            }
+        }
+    }
 }
 
-.gridder-content {
-  display: none;
-}
-
-.gridder-list:nth-child(n) {
-  margin-bottom: 1%;
-  margin-right: 1%
-}
 
 .gridder-show {
   padding: 20px;
@@ -1023,6 +1000,44 @@ form{
     }
     p{
         font-size: .8em;
+    }
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+@media screen and (min-width: 370px){
+    #section-three{
+        .events{
+            div{
+                margin: 50px 0;
+            }
+        }
+    }
+}
+@media screen and (min-width: 450px){
+    #section-three{
+        .events{
+            div{
+                height: 70vh;
+                margin: 50px 0;
+            }
+        }
+    }
+}
+@media screen and (min-width: 600px){
+    #section-three{
+        .events{
+            
+            div{
+                img{
+                    margin-bottom: 30px;
+                }
+                height: 60vh ;
+            }
+        }
     }
 }
 /*Tablet*/
@@ -1221,8 +1236,8 @@ form{
     #section-eleven{
         
         .gridder{
-        display: grid;
-           grid-template: 33.34% 33.33% 33.33%;
+           display: grid;
+           grid-template: 30% 10px 30% 10px 30%;
         
                 .list1{
                     grid-column-start: 1;
@@ -1230,19 +1245,20 @@ form{
                     grid-row: 1;
                 }
                 .list2{
-                    grid-column-start: 3;
-                    grid-column-end: 4;
+                    grid-column-start: 4;
+                    grid-column-end: 5;
                     grid-row: 1;
                 }
                 .list3{
-                    grid-column-start: 5;
-                    grid-column-end: 6;
+                    grid-column-start: 6;
+                    grid-column-end: 7;
                     grid-row: 1;
                 }
             .gridder-show{
                 grid-row: 2;
                 grid-column-start: 1;
                 grid-column-end: 6;
+
             }
         }
         .imgrow{
