@@ -31,7 +31,7 @@ export default ({sections, timeline})=>{
               {timeline.map(time=>{
                 return(
                   <>
-                    <div className="tl-item">
+                    <div className="tl-item" key={time.Jaar}>
                       <div className="tl-bg" style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_BASE}assets/images/${time.image})`}} ></div>
                       <div className="tl-year">
                         <p className="f2">{time.Jaar}</p>
