@@ -8,11 +8,11 @@ export default ({Title, Descr})=>{
        
         $(el.current).backgroundCycle({
             imageUrls: [
-                'images/1.jpg',
-                'images/2.jpg',
-                'images/3.jpg',
-                'images/4.jpg',
-                'images/strip30.jpg'
+                `${process.env.NEXT_PUBLIC_BASE}assets/images/1.jpg`,
+                `${process.env.NEXT_PUBLIC_BASE}assets/images/2.jpg`,
+                `${process.env.NEXT_PUBLIC_BASE}assets/images/3.jpg`,
+                `${process.env.NEXT_PUBLIC_BASE}assets/images/4.jpg`,
+                `${process.env.NEXT_PUBLIC_BASE}assets/images/strip30.jpg`
             ],
             fadeSpeed: 1000,
             duration: 3000,
@@ -25,7 +25,7 @@ export default ({Title, Descr})=>{
     return(
         <header ref={el}>
             <div className="transparant">
-                    <a href="./" title="Ga naar de startpagina" className="logo"><img src="../images/studiotibo-logo-wit.png" alt="Studio Tibo Logo"/></a>
+                    <a href="./" title="Ga naar de startpagina" className="logo"><img src={`${process.env.NEXT_PUBLIC_BASE}assets/images/studiotibo-logo-wit.png`} alt="Studio Tibo Logo"/></a>
                     <h1 >{Title}</h1>
                     <p className="introtext">{Descr}</p>
                     <ul className="social">

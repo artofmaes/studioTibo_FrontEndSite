@@ -10,7 +10,7 @@ const breakpointColumnsObj = {
   500: 1
 };
 
-export default ({categories, comics, illustraties, ontwerpen})=>{
+export default ({comics, illustraties, ontwerpen})=>{
   const [showCat1, setShowCat1] = useState(false);
   const [showCat2, setShowCat2] = useState(false);
   const [showCat3, setShowCat3] = useState(false);
@@ -40,14 +40,14 @@ export default ({categories, comics, illustraties, ontwerpen})=>{
            <div className="container">
              <ul className="gridder">
              <li className="gridder-list list1">
-                  <img src="./images/comics.jpg" onClick={toggleCat1}/>
+                  <img src={`${process.env.NEXT_PUBLIC_BASE}assets/images/comics.jpg`} onClick={toggleCat1}/>
                 </li>
                 <li className="gridder-list list2">
-                  <img src="./images/illustraties.jpg" onClick={toggleCat2}/>
+                  <img src={`${process.env.NEXT_PUBLIC_BASE}assets/images/illustraties.jpg`} onClick={toggleCat2}/>
                 </li>
 
                 <li className="gridder-list list3">
-                  <img src="./images/ontwerpen.jpg" onClick={toggleCat3}/>
+                  <img src={`${process.env.NEXT_PUBLIC_BASE}assets/images/ontwerpen.jpg`} onClick={toggleCat3}/>
                 </li>
              </ul>
              <div className="gridder-show" style={{display: showCat1? "block":"none"}}>
@@ -94,12 +94,9 @@ export async function getStaticProps(){
   const illustratieData = illustraties.data['hydra:member']
   const ontwerpen = await axios.get(`${process.env.NEXT_PUBLIC_API_ENDPOINT}works?category=6`);
   const ontwerpData = ontwerpen.data['hydra:member']
-  const res2 = await axios.get(`${process.env.NEXT_PUBLIC_API_ENDPOINT}categories`);
-  const catData = res2.data['hydra:member'];
 
   return {
       props:{
-          categories: catData,
           comics: comicData,
           illustraties: illustratieData,
           ontwerpen: ontwerpData
