@@ -11,7 +11,6 @@ const breakpointColumnsObj = {
 
 
 export default ({sections, events})=>{
-    
     return(
         <>
         <Layout Title="Studio Tibo" Descr="Jouw polyvalente tekenaar!"/>
@@ -70,6 +69,8 @@ export default ({sections, events})=>{
 export async function getStaticProps(){
     // const userInstagram = require("user-instagram");
     // const postData = await userInstagram("studiotibo").catch(console.error);
+    // const instagram = await axios.get(`https://api.instagram.com/v1/users/self/media/recent?access_token=${process.env.ACCESS_TOKEN}`);
+    // const postData = instagram.data;
     const res = await axios.get(`${process.env.NEXT_PUBLIC_API_ENDPOINT}sections?pagina=6`);
     const sectionData = res.data['hydra:member']
     const res2 = await axios.get(`${process.env.NEXT_PUBLIC_API_ENDPOINT}events`);

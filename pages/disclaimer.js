@@ -1,7 +1,7 @@
 import Layout from '../components/Layout';
 import Footer from '../components/Footer';
-import axios from 'axios'
-export default ({sections, timeline})=>{
+
+export default ()=>{
   
     return(
         <>
