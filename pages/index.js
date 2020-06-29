@@ -10,13 +10,13 @@ const breakpointColumnsObj = {
 };
 
 
-export default ({postData, sections, events})=>{
+export default ({sections, events})=>{
     
     return(
         <>
         <Layout Title="Studio Tibo" Descr="Jouw polyvalente tekenaar!"/>
         
-        <section id="section-one">
+        {/* <section id="section-one">
         <h2>Mijn recente Instagramposts</h2>
             <Masonry breakpointCols={breakpointColumnsObj} className="my-masonry-grid" columnClassName="my-masonry-grid_column">
                 {postData.posts.map(post =>{
@@ -25,7 +25,7 @@ export default ({postData, sections, events})=>{
                     )
                 })}
             </Masonry>
-        </section>
+        </section> */}
        {sections.map(section =>{
            return(
             <section id={section.naam} key={section.naam}>
@@ -68,8 +68,8 @@ export default ({postData, sections, events})=>{
 }
 
 export async function getStaticProps(){
-    const userInstagram = require("user-instagram");
-    const postData = await userInstagram("studiotibo").catch(console.error);
+    // const userInstagram = require("user-instagram");
+    // const postData = await userInstagram("studiotibo").catch(console.error);
     const res = await axios.get(`${process.env.NEXT_PUBLIC_API_ENDPOINT}sections?pagina=6`);
     const sectionData = res.data['hydra:member']
     const res2 = await axios.get(`${process.env.NEXT_PUBLIC_API_ENDPOINT}events`);
@@ -77,7 +77,7 @@ export async function getStaticProps(){
 
     return {
         props:{
-            postData: postData,
+            // postData: postData,
             sections: sectionData,
             events: eventData
         }
