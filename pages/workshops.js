@@ -13,7 +13,7 @@ export default ({sections})=>{
                             <div className="transparant2" key={text.title}>
                                 <div className="info2">
                                     {text.image && <div className="fotos" >
-                                        <img src={`https://wdev.be/wdev_jordi/eindwerk/assets/images/${text.image}`}/>
+                                        <img src={`${process.env.NEXT_PUBLIC_BASE}assets/images/${text.image}`}/>
                                     </div> }
                                     <div className="uitleg">
                                         <h2>{text.title}</h2>
@@ -34,7 +34,7 @@ export default ({sections})=>{
 }
 
 export async function getStaticProps(){
-    const res = await axios.get('https://wdev.be/wdev_jordi/eindwerk/api/sections?pagina=9');
+    const res = await axios.get(`${process.env.NEXT_PUBLIC_API_ENDPOINT}sections?pagina=9`);
     const sectionData = res.data['hydra:member']
    
   

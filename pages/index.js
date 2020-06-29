@@ -1,7 +1,6 @@
 import Layout from '../components/Layout';
 import Footer from '../components/Footer';
 import axios from 'axios';
-import {useState} from 'react';
 import Masonry from 'react-masonry-css';
 const breakpointColumnsObj = {
   default: 6,
@@ -54,7 +53,7 @@ export default ({postData, sections, events})=>{
                         <div className="nice" key={event.naam}>
                             <h3>{event.naam}</h3>
                             <p>{event.beschrijving}</p>
-                            <img src={`https://wdev.be/wdev_jordi/eindwerk/image.php?test.jpg&width=250&height=400&image=/wdev_jordi/eindwerk/assets/images/${event.img}`} />
+                            <img src={`${process.env.NEXT_PUBLIC_BASE}image.php?test.jpg&width=250&height=400&image=/wdev_jordi/eindwerk/assets/images/${event.img}`} />
                             <a href={event.link} target="_blank" title="Ontdek hier meer!" className="button2">Meer info</a>
 
                         </div>
@@ -71,9 +70,9 @@ export default ({postData, sections, events})=>{
 export async function getStaticProps(){
     const userInstagram = require("user-instagram");
     const postData = await userInstagram("studiotibo");
-    const res = await axios.get('https://wdev.be/wdev_jordi/eindwerk/api/sections?pagina=6');
+    const res = await axios.get(`${process.env.NEXT_PUBLIC_API_ENDPOINT}sections?pagina=6`);
     const sectionData = res.data['hydra:member']
-    const res2 = await axios.get('https://wdev.be/wdev_jordi/eindwerk/api/events');
+    const res2 = await axios.get(`${process.env.NEXT_PUBLIC_API_ENDPOINT}events`);
     const eventData = res2.data['hydra:member'];
 
     return {

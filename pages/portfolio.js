@@ -55,7 +55,7 @@ export default ({categories, comics, illustraties, ontwerpen})=>{
              <Masonry breakpointCols={breakpointColumnsObj} className="my-masonry-grid" columnClassName="my-masonry-grid_column">
                 {comics.map(comic =>{
                     return(
-                        <div  key={comic.naam} ><a data-fancybox="comics" href={`https://wdev.be/wdev_jordi/eindwerk/assets/images/${comic.filename}`}><img src={`https://wdev.be/wdev_jordi/eindwerk/image.php?test.jpg&width=250&height=400&image=/wdev_jordi/eindwerk/assets/images/${comic.filename}`}/></a></div>
+                        <div  key={comic.naam} ><a data-fancybox="comics" href={`${process.env.NEXT_PUBLIC_BASE}assets/images/${comic.filename}`}><img src={`${process.env.NEXT_PUBLIC_BASE}image.php?test.jpg&width=250&height=400&image=/wdev_jordi/eindwerk/assets/images/${comic.filename}`}/></a></div>
                     )
                 })}
             </Masonry>
@@ -65,7 +65,7 @@ export default ({categories, comics, illustraties, ontwerpen})=>{
                 <Masonry breakpointCols={breakpointColumnsObj} className="my-masonry-grid" columnClassName="my-masonry-grid_column">
                     {illustraties.map(illustratie =>{
                         return(
-                            <div key={illustratie.naam}><a data-fancybox="illustraties" href={`https://wdev.be/wdev_jordi/eindwerk/assets/images/${illustratie.filename}`}><img src={`https://wdev.be/wdev_jordi/eindwerk/image.php?test.jpg&width=250&height=400&image=/wdev_jordi/eindwerk/assets/images/${illustratie.filename}`}/></a></div>
+                            <div key={illustratie.naam}><a data-fancybox="illustraties" href={`${process.env.NEXT_PUBLIC_BASE}assets/images/${illustratie.filename}`}><img src={`${process.env.NEXT_PUBLIC_BASE}image.php?test.jpg&width=250&height=400&image=/wdev_jordi/eindwerk/assets/images/${illustratie.filename}`}/></a></div>
                         )
                     })}
                 </Masonry>
@@ -75,7 +75,7 @@ export default ({categories, comics, illustraties, ontwerpen})=>{
                 <Masonry breakpointCols={breakpointColumnsObj} className="my-masonry-grid" columnClassName="my-masonry-grid_column">
                     {ontwerpen.map(ontwerp =>{
                         return(
-                            <div key={ontwerp.naam}><a data-fancybox="ontwerpen" href={`https://wdev.be/wdev_jordi/eindwerk/assets/images/${ontwerp.filename}`}><img src={`https://wdev.be/wdev_jordi/eindwerk/image.php?test.jpg&width=250&height=400&image=/wdev_jordi/eindwerk/assets/images/${ontwerp.filename}`}/></a></div>
+                            <div key={ontwerp.naam}><a data-fancybox="ontwerpen" href={`${process.env.NEXT_PUBLIC_BASE}assets/images/${ontwerp.filename}`}><img src={`${process.env.NEXT_PUBLIC_BASE}image.php?test.jpg&width=250&height=400&image=/wdev_jordi/eindwerk/assets/images/${ontwerp.filename}`}/></a></div>
                         )
                     })}
                 </Masonry>
@@ -88,13 +88,13 @@ export default ({categories, comics, illustraties, ontwerpen})=>{
 }
 
 export async function getStaticProps(){
-  const comics = await axios.get('https://wdev.be/wdev_jordi/eindwerk/api/works?category=4');
+  const comics = await axios.get(`${process.env.NEXT_PUBLIC_API_ENDPOINT}works?category=4`);
   const comicData = comics.data['hydra:member']
-  const illustraties = await axios.get('https://wdev.be/wdev_jordi/eindwerk/api/works?category=5');
+  const illustraties = await axios.get(`${process.env.NEXT_PUBLIC_API_ENDPOINT}works?category=5`);
   const illustratieData = illustraties.data['hydra:member']
-  const ontwerpen = await axios.get('https://wdev.be/wdev_jordi/eindwerk/api/works?category=6');
+  const ontwerpen = await axios.get(`${process.env.NEXT_PUBLIC_API_ENDPOINT}works?category=6`);
   const ontwerpData = ontwerpen.data['hydra:member']
-  const res2 = await axios.get('https://wdev.be/wdev_jordi/eindwerk/api/categories');
+  const res2 = await axios.get(`${process.env.NEXT_PUBLIC_API_ENDPOINT}categories`);
   const catData = res2.data['hydra:member'];
 
   return {
